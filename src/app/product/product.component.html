@@ -1,0 +1,14 @@
+<div class="card">
+    <div  [ngStyle]="{'background-image': 'url(' + product.url + ')'}" class="card__img" [routerLink]="['ProductDetail/', product.id]"></div>
+    <div class="card__body">
+        <h5 class="card__body__title">{{product.name}}</h5>
+        <p class="card__body__text">{{product.description}}</p>
+        <h5 class="card__body__price">${{product.price}}</h5>
+    </div>
+    <div class="card__quantity">
+        <fa-icon [icon]="faPlus" (click)="Add()"></fa-icon>
+        <p class='card__quantity__no'>{{quantity}}</p>
+        <fa-icon [icon]="faMinus" (click)="subtract()"></fa-icon>
+    </div>
+    <button class="card__btn" (click)="addCart(product)">Add Cart</button>
+</div>

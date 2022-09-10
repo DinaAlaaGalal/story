@@ -1,0 +1,39 @@
+<div class="cartcontainer" *ngFor="let product of cartList">
+<div class="container">
+    <div [ngStyle]="{'background-image': 'url(' + product?.url + ')'}" class="container__img"></div>
+    <div class="container__cardDetails">
+    <div class='container__card__body'>
+        <h5 class="container__card__body__title">{{product?.name}}</h5>
+        <p class="container__card__body__text">{{product?.description}}</p>
+        <h5 class="container__card__body__price" >${{product?.price}}</h5>
+    </div>
+    <div class="container__card__quantity">
+        <span class='container__card__quantity__no'>quantity:  </span>
+        <span class='container__card__quantity__no'>{{product?.quantity}}</span>
+        
+    </div>
+</div>
+</div>
+<div >
+    
+</div>
+</div>
+<p class="total" >total :: $ {{calculateTotal()}} </p>
+        <form class="shipping_card" [formGroup]='form'  (ngSubmit)="onSubmit()">
+            <label>FullName</label>
+            <input type="text"  formControlName="fullName" required [ngClass]="form.controls?.['fullName']?.invalid &&form.controls?.['fullName']?.touched  ? 'alert': 'non-alert'">
+            <div *ngIf="form.controls?.['fullName']?.touched && form.controls?.['fullName']?.errors?.['required']" class="alert-msg">Fullname is required</div>
+            <br/>
+            <label>Address</label>
+            <input type="text" formControlName="address" required [ngClass]="form.controls?.['address']?.invalid &&form.controls?.['fullName']?.touched? 'alert': 'non-alert'">
+            <div *ngIf="form.controls?.['address']?.touched&&form.controls?.['address']?.errors?.['required']" class="alert-msg">address is required</div>
+            <br/>
+            <label>credit card number</label>
+            <input type="text"  formControlName="creditNo" placeholder="xxxx-xxxx-xxxx" required minlength="12" maxlength="16" [ngClass]="form.controls?.['creditNo']?.invalid && form.controls?.['fullName']?.touched? 'alert': 'non-alert'">
+            <div *ngIf="form.controls?.['creditNo']?.touched&&form.controls?.['creditNo']?.errors?.['required']" class="alert-msg">creditNo is required</div>
+            <div *ngIf="form.controls?.['creditNo']?.touched&&form.controls?.['creditNo']?.errors?.['minlength']" class="alert-msg">creditNo must be between 12 to 16 noo</div>
+            <div *ngIf="form.controls?.['creditNo']?.touched&&form.controls?.['creditNo']?.errors?.['maxlength']" class="alert-msg">creditNo must be between 12 to 16 noo</div>
+            <br/>
+            <button type="submit" [disabled]="form.invalid"> Submit</button>
+        </form>
+    

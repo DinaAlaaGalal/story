@@ -1,0 +1,16 @@
+<div class="container">
+    <div [ngStyle]="{'background-image': 'url(' + product?.url + ')'}" class="container__img"></div>
+    <div class="container__cardDetails">
+    <div class='container__card__body'>
+        <h5 class="container__card__body__title">{{product?.name}}</h5>
+        <p class="container__card__body__text">{{product?.description}}</p>
+        <h5 class="container__card__body__price">${{product?.price}}</h5>
+    </div>
+    <div class="container__card__quantity">
+        <span class='container__card__quantity__no'>quantity:  </span>
+        <span class='container__card__quantity__no'>{{product?.quantity}}</span>
+    </div>
+    <button class="container__card__btn"  (click)="addCart(product)">add cart</button>
+    <a [routerLink]="['/']">back to previous link</a>
+    </div>
+</div>

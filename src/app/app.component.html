@@ -1,0 +1,14 @@
+<div class="navContainer">
+  <div class="navContainer__logo">
+    <a  class="navContainer__logo__icon">
+      <fa-icon [icon]="faCoins" class="navContainer__logo__icon__brand" ></fa-icon>
+      <span class="navContainer__logo__icon__tittle">Peneless</span> 
+    </a>
+  </div>
+  <div class="navContainer__nav">
+  <a  class="navContainer__nav__item"  [routerLink]="['/']">cartList</a>
+  <a  class="navContainer__nav__item" [routerLink]="['/cart']">Cart Data</a>
+</div>
+</div>
+<!-- <app-products-list></app-products-list> -->
+<router-outlet></router-outlet>

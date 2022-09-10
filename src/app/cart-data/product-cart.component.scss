@@ -1,0 +1,54 @@
+.cart__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.container{
+  display: flex;
+  max-width: 1024px;
+  justify-content: space-around;
+  align-items: center;
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+ &__img {
+   width:20rem;
+   height:20rem ;
+   display: flex;
+   background-size: 100% 100%;
+   background-repeat: no-repeat;
+   border-radius: 10px;
+   margin-top: 5rem;
+ 
+ }
+ &__cardDetails{
+     display: flex;
+     flex-direction: column;
+ }
+
+ }
+ .shipping_card{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 20px;
+ }
+ .total{
+  font-size: 2rem;
+   display: flex;
+   justify-content: center;
+ }
+ .alert-msg{
+  color: red;
+}
+.non-alert{
+  color: black;
+}
+.alert{
+border:2px solid red;
+}

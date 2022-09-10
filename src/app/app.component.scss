@@ -1,0 +1,57 @@
+.navContainer {
+  display: flex;
+  justify-content: flex-start;
+  background-color: rgb(113, 196, 134);
+  overflow: hidden;
+  width: 99%;
+  align-items: center;
+  margin: auto;
+
+  &__logo {
+
+    &__icon {
+      &__brand {
+        color: #f2f2f2;
+        font-size: 3rem;
+        margin-left: 3vw;
+        margin: 1rem;
+      }
+
+      &__tittle {
+        color: #f2f2f2;
+        font-size: 2.2rem;
+        font-style: italic;
+        font-family: 'Lobster Two', 'cursive';
+      }
+    }
+  }
+
+  &__nav {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
+
+    /* Style the links inside the navigation bar */
+    &__item {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 20px 16px;
+      text-decoration: none;
+      font-size: 19px;
+
+      &:hover {
+        background-color: gold;
+        color: black;
+      }
+
+      &:active {
+        background-color: gold;
+        color: white;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,57 @@
+.card{
+  display: flex;
+  flex-direction: column;
+  width: 22rem;
+  border: 2px solid rgb(46, 82, 46);
+  border-radius: 4px;
+  justify-content: center;
+  max-height:70rem;
+  margin: 3vw;
+  &__img{
+    width: 100%;
+    height:15rem;
+    display: flex;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    // background-position: center center
+  }
+  &__body{
+    width: 90%;
+    height:auto;
+    padding: 10px;
+    &__price{
+      color: gold;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    &__title{
+      color: rgb(226, 90, 90);
+      font-size: 1.5rem;
+    }
+    &__text{
+      color:gray;
+      font-size:1rem;
+      text-transform: lowercase;
+
+    }
+  }
+  &__quantity{
+    padding: 10px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(227, 239, 184);;
+    width:30%;
+    height:4vh;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    &__no{
+      font-size: 1rem;
+    }
+  }
+  &__btn{
+    background-color: rgb(113, 196, 134);
+  }
+}
